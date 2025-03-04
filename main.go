@@ -1,7 +1,24 @@
 package main
 
-import "fmt"
+import (
+	"github.com/gin-gonic/gin"
+	"go-jwt/initializers"
+)
+
+func init() {
+	initializers.LoadEnvVariables()
+}
 
 func main() {
-	fmt.Println("Hello GolandProjects")
+	r := gin.Default()
+	r.GET("/ping", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"message": "pong",
+		})
+	})
+
+	err := r.Run()
+	if err != nil {
+		return
+	}
 }
