@@ -4,7 +4,7 @@
 This project is an implementation of an authorization and authentication backend service using PostgreSQL (via GORM) and Gin framework. It utilizes the JWT package for generating and validating JSON Web Tokens (JWT) for secure user authentication and bcrypt for password hashing to ensure password security. The service allows users to register, log in, and authenticate securely using JWT tokens.
 
 ### Features
-
+ 
 User Registration: Allows users to create an account with a hashed password.
 
 Login: Allows users to authenticate and receive a JWT token for subsequent requests.
